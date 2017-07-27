@@ -1,6 +1,25 @@
 var app = angular.module("testeFoster", []);
 
+app.controller('ListController', function($scope, $route, $location, $http){
+  
+  $scope.sendCategory = function(category) {
+     $scope.search =category.name;
+  };
+  
+})	
+
+app.controller('CategoriasFiltro', function($scope) {
+    $scope.filtro =[
+        { "name":"Esportes" },
+        { "name":"Animais" },
+        { "name":"Comida" },
+        { "name":"Cidade" }
+    ];
+    
+});
+
 app.controller('ListaFiltro', function($scope) {
+    
     $scope.lista = [{
         "id":1,
         "category":"animais",

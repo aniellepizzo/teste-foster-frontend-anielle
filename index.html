@@ -18,17 +18,14 @@
 
     </head>
     
-    <body>
+    <body ng-controller="ListaFiltro">
         
         <header>
             <div class="container">
                 <div class="filtro-group">
                     <button class="botao-filtro">Selecione uma categoria<i class="icon-angle-down"></i></button>
-                    <ul>
-                      <li role="esportes">Esportes</li>
-                      <li role="animais">Animais</li>
-                      <li role="comida">Comida</li>
-                      <li role="cidade">Cidade</li>                        
+                    <ul ng-controller="CategoriasFiltro">
+                      <li ng-click="sendCategory(category)" ng-repeat="category in filtro">{{category.name}}</li>
                     </ul>
                 </div>
             </div>

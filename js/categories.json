@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Esportes"
+  },
+  {   
+    "id": 2,
+    "name": "Animais"
+  },
+  {   
+    "id": 3,
+    "name": "Comida"
+  },
+  {
+    "id": 4,
+    "name": "Cidade"
+  }
+]

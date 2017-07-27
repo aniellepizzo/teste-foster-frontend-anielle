@@ -67,7 +67,6 @@ header .container .filtro-group ul{
     border-top-right-radius: 0;
     position: absolute;
     background: #fff;
-    display: none;
 }
 
 header .container .filtro-group ul li{
