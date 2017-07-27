@@ -1,28 +1,30 @@
 <div ng-controller="ListController">
     <header>
         <div class="container" ng-controller="CategoryController">
-          <ul ng-repeat="category in categories">  
-            <li ng-click="sendCategory(category)">{{category.name}}</li>
-          </ul>
+            <div class="filtro-group">
+                <button class="botao-filtro">Selecione uma categoria<i class="icon-angle-down"></i></button>
+                <ul>  
+                <li  ng-repeat="category in categories" ng-click="sendCategory(category)">{{category.name}}</li>
+                </ul>            
+            </div>
+            
+
         </div>    
     </header>
-
-<div class="tabs" ng-controller="tabsController">
-  <ul>
-      <li ng-click="tab(1)">Recent items</li>
-      <li ng-click="tab(2)">Popular items</li>
-  </ul>
-</div>
-
-<div class="container">
-  <div class="left" ng-controller="ItemController">
-    <div class="itemList">
-    	<div class="item" ng-repeat="item in items | filter:search | orderBy:sort">	
-  			<h3 ng-click="viewDetail(item)">{{item.title}} - {{item.date}}</h3>
-  			<p>{{item.description}}</p>
-        <a ng-click="viewDetail(item)">View full item details</a>
-  		</div>
+    
+    <div class="conteudo-lista">
+        <div class="container">
+          <div class="row" ng-controller="ItemController">
+            <div class="col"  ng-repeat="item in items | filter:search | orderBy:sort">
+                <a ng-click="viewDetail(item)" class="card">	
+                    <img ng-src="{{item.image_thumb}}" class="img-responsive"/>
+                    <h2 ng-click="viewDetail(item)">{{item.category}}</h2>
+                    <p>{{item.txt_resume}}</p>
+                    <div class="mais">{{item.txt_button}}</div>
+                </a>
+            </div>
+          </div>
+        </div>    
     </div>
-  </div>
-</div>
+    
 </div>

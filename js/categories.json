@@ -1,14 +1,18 @@
 [
   {
     "id": 1,
-    "name": "phone"
+    "name": "Esportes"
   },
   {   
     "id": 2,
-    "name": "food"
+    "name": "Animais"
+  },
+  {   
+    "id": 2,
+    "name": "Comida"
   },
   {
     "id": 3,
-    "name": "vehicule"
+    "name": "Cidade"
   }
 ]
